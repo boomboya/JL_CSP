@@ -28,17 +28,29 @@ average = total_ages/4
 print("the average age is:", average)
 
  # list all of the different mathematical operators (give me symobol and what it does)\
-num_one = 12
-num_two = 7
+num_one = int(input("tell me a number:\n"))
+num_two = float(input("tell me another number:\n"))
+num_one += num_two
+print("addition(+):", num_one)
+num_one -= num_two
+print("subtraction(-):", num_one)
+num_one *= num_two
+print("mutliplcation(*):", num_one)
+num_one /= num_two
+print("division(/):", round(num_one, 2)) 
+num_one **= num_two
 
-print("addition(+):", num_one+num_two)
-print("subtraction(-):", num_one-num_two)
-print("mutliplcation(*):", num_one*num_two)
-print("division(/):", num_one/num_two)
-print("exponets(**):", num_one**num_two)
-print("integer division(//):", num_one//num_two)
-print("modulo(%):", num_one%num_two)
+# round(number to round, number of decimal places)
+
+print("exponets(**):", num_one)
+num_one //= num_two
+print("integer division(//):", num_one)
+num_one %= num_two
+print("modulo(%):", num_one)
 
 #integer division will only give you the whole number when dividing
 #floats in program are numbers with decimals
 #modulo gives left over amounts of the division
+
+#why do we need to do expressions
+    #programming is math logic but without numbers
