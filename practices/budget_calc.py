@@ -16,4 +16,14 @@ print("You should put this much of your income into savings:", savings)
 spending = income-(expenses+savings)
 print("you have this much spending money:", spending)
 
-print("your rent is:", num_two, "that is:",int(input((num_two*income)/100)),"%")
+rent_percent = (num_two/income)*100
+print("This percentage of your income goes to rent:", rent_percent)
+utilities_percent = (num_three/income)*100
+round(utilities_percent, 2)
+print("This percentage of your income goes to utilities:", round(utilities_percent,1))
+groceries_percent = (num_four/income)*100
+round(groceries_percent, 2)
+print("This percentage of your income goes to groceries:", round(groceries_percent))
+transportation_percent = (num_five/income)*100
+round(transportation_percent, 2)
+print("This percentage of your income goes to transportation:", round(transportation_percent))
