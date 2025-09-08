@@ -15,3 +15,5 @@ savings = income*.1
 print("You should put this much of your income into savings:", savings)
 spending = income-(expenses+savings)
 print("you have this much spending money:", spending)
+
+print("your rent is:", num_two, "that is:",int(input((num_two*income)/100)),"%")
