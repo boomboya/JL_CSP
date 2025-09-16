@@ -1,14 +1,13 @@
 # JL 7th updated hello world 
 
-def welcome():
-    name = input("what is your name?")
+def welcome(name):
     print(f"hello, {name}!")
 
-welcome()
-welcome()
-welcome()
-welcome()
-welcome()
+welcome("chelsea")
+welcome("jaden")
+welcome("spencer")
+welcome("beth")
+welcome("eric")
 
 farewell = "bye everyone"
 print(farewell)
