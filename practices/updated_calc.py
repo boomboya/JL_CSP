@@ -2,33 +2,35 @@
 
 print("Hello, this is a budget calculator")
 
-def userinfo():
-    return int(input("tell me your monthly income:\n"))
+def user_info():
+    income = int(input("tell me your monthly income: "))
+    rent = int(input("tell me your rent: "))
+    utilities = int(input("tell me your utilities cost: "))
+    groceries = int(input("tell me how much your groceries cost: "))
+    transportation = int(input("tell me how much your transportation cost: "))
+   
+    return income, rent, utilities, groceries, transportation
 
 
-rent = userinfo("rent")
 
-utilities = 
-groceries = 
-transportation = 
+def budget_calc(income, rent, utilities, groceries, transportation):
+    expenses = rent + utilities + groceries + transportation
+    savings = income * .1
+    spending = income - (expenses + savings)
 
-income = userinfo("income") 
+    rent_percent = (rent/income)*100
+    utilities_percent = (utilities/income)*100
+    groceries_percent = (groceries/income)*100
+    transportation_percent = (transportation/income)*100
+    
 
-expenses = rent + utilities + groceries + transportation
-print("Your income is:", income)
-savings = income*.1
-print("You should put this much of your income into savings:", savings)
-spending = income-(expenses+savings)
-print("you have this much spending money:", spending)
+    print("")
+    print("your rent is $" + str(rent) + " which is " + str(round(rent_percent, 2)) + "% of your income")
+    print("your utilities are $" + str(utilities) + " which is " + str(round(utilities_percent, 2)) + "% of your income")
+    print("your groceries are $" + str(groceries) + " which is " + str(round(groceries_percent, 2)) + "% of your income")
+    print("your transportation is $" + str(transportation) + " which is " + str(round(transportation_percent, 2)) + "% of your income")
+    print("")
+    print("your total expenses are $" + str(expenses))
+    print("your savings goal is $" + str(savings))
+    print("your spending money is $" + str(spending))
 
-rent_percent = (rent/income)*100
-print("This percentage of your income goes to rent:", rent_percent)
-utilities_percent = (utilities/income)*100
-
-print("This percentage of your income goes to utilities:", round(utilities_percent,1))
-groceries_percent = (groceries/income)*100
-
-print("This percentage of your income goes to groceries:", round(groceries_percent))
-transportation_percent = (transportation/income)*100
-
-print("This percentage of your income goes to transportation:", round(transportation_percent))
