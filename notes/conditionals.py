@@ -7,15 +7,29 @@
 #else:
     #print("then go do your homework")
     
-grade = 100
+grade = 1000
 
 if grade >= 90:
-    print(f"you have {grade}% that is an A")
+    if grade > 100:
+        print("not possible")
+    else:
+        print(f"you have {grade}% that is a A")
 elif grade >= 80:
      print(f"you have {grade}% that is an b")
 elif grade >= 70:
+    print(f"you have {grade}% that is a c")
 else:
     print(f"you have a {grade}% that is a c or lower :(")
+
+
+name = input("what is your name: ")
+
+if name == "ms larose":
+    print("you are the teacher")
+elif name == "tia" or name == "ashley":
+    print("you are the ta")
+else:
+    print(f"hello {name}, you are a student")
 
 #What puts something inside of the “if” statement? an indent
 
@@ -37,6 +51,6 @@ else:
 #== two equal signs is a command or a question asking if its equal one equal sign is a variable
 #! not equal to
 
-#What are the 3 logical operators?
-#What are logical operators for?
-#What does a nested conditional statement do?
+#What are the 3 logical operators? and, or, or not
+#What are logical operators for? allow us to combine conditional statements
+#What does a nested conditional statement do? runs only when the statemnet above is true
