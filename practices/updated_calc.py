@@ -2,35 +2,32 @@
 
 print("Hello, this is a budget calculator")
 
-def user_info():
-    income = int(input("tell me your monthly income: "))
-    rent = int(input("tell me your rent: "))
-    utilities = int(input("tell me your utilities cost: "))
-    groceries = int(input("tell me how much your groceries cost: "))
-    transportation = int(input("tell me how much your transportation cost: "))
+def user_info(prompt):
+    value = float(input(prompt))
+    return value
+
+def calc_percent(income, expense):
+    return (expense / income) * 100
+
+def main():
+    income = user_info("What is your monthly income?: $")
+    rent = user_info("What is your rent?: $")
+    groceries = user_info("What is your food cost?: $")
+    utilities = user_info("What is your utilities cost?: $")
+    transportation = user_info("What is your transportation cost?: $")
+
+    print("Here is your percentages of income spent on each category: ")
+    print("Rent: " + str(round(calc_percent(income, rent), 2)) + "%")
+    print("Groceries: " + str(round(calc_percent(income, groceries), 2)) + "%")
+    print("Utilities: " + str(round(calc_percent(income, utilities), 2)) + "%")
+    print("Transportation: " + str(round(calc_percent(income, transportation), 2)) + "%")
+
+    total_expenses = rent + groceries + utilities + transportation 
+    savings_goal = income * 0.1
+    spending_money = income - (total_expenses + savings_goal)   
    
-    return income, rent, utilities, groceries, transportation
+    print("Total Expenses: $" + str(total_expenses))
+    print("Savings Goal (10% of income): $" + str(savings_goal))
+    print("Spending Money: $" + str(spending_money))
 
-
-
-def budget_calc(income, rent, utilities, groceries, transportation):
-    expenses = rent + utilities + groceries + transportation
-    savings = income * .1
-    spending = income - (expenses + savings)
-
-    rent_percent = (rent/income)*100
-    utilities_percent = (utilities/income)*100
-    groceries_percent = (groceries/income)*100
-    transportation_percent = (transportation/income)*100
-    
-
-    print("")
-    print("your rent is $" + str(rent) + " which is " + str(round(rent_percent, 2)) + "% of your income")
-    print("your utilities are $" + str(utilities) + " which is " + str(round(utilities_percent, 2)) + "% of your income")
-    print("your groceries are $" + str(groceries) + " which is " + str(round(groceries_percent, 2)) + "% of your income")
-    print("your transportation is $" + str(transportation) + " which is " + str(round(transportation_percent, 2)) + "% of your income")
-    print("")
-    print("your total expenses are $" + str(expenses))
-    print("your savings goal is $" + str(savings))
-    print("your spending money is $" + str(spending))
-
+main()
