@@ -2,47 +2,56 @@
 #include <stdio.h>
 
 int main(void){
-    int grade = 95; // 4 bytes
+    int grade; // 4 bytes
     float pi = 3.14; // 4 bytes
     double long_pi = 4.1415926358; // 8 bytes
-    char letter_grade = 'A'; // 1 byte
+    char letter_grade; // 1 byte
     char name[] = "Jovie";
-    printf("%s did it", name);
-    printf(" you have a %d, in the class. that is a %c", grade, letter_grade);
+
+    printf("what is your grade percentage as a whole number: ");
+    scanf("%d", &grade);
+
+    printf("what is your letter grade: ");
+    scanf(" %c", &letter_grade);
+
+    printf("%s did it\n", name);
+    printf("you have a %d, in the class. that is a %c\n", grade, letter_grade);
+    
     return 0;
 }
 
 
 //What is the main difference between declaring variables in Python and C?
-
-// python is a dynamic typed language so means variables can change data types in middle of program
-// all variables take the same amount of space
+    // so it knows how much space to save
 
 //In C, what is the purpose of specifying a data type when declaring a variable?
+    //the purpose of specifying data type in c is so that it wont changeso you must be more specific with the data type
 
 //List three common data types used in C and their corresponding format specifiers for printf().
-
-//How do you declare and initialize an integer variable named "age" with the value 25 in C?
+    // intager is 4vytes u call by d float is 4bytes and you call it by f and char is 1byte amnd is called by c
 
 //What is the difference between printf() and scanf() functions in C?
+    // scanf is the user input but print f is just printing 
 
-//Write a C program that asks the user for their name and age, then prints a greeting message with their information.
-
-//How do you add comments in C? What are the two types of comments?
+//How do you add comments in C? 
+    // //
 
 //What is the purpose of the #include <stdio.h> line at the beginning of a C program?
+    //standard library this allows you to use inputs and outputs
 
 //In C, what is the significance of the main() function?
-
-//Write a C program that calculates the area of a rectangle. Ask the user to input the length and width, then display the result.
+    //everything must be function main is function
 
 //What is the difference between %d and %f format specifiers in printf()?
+    // d is for integar f is for float
 
 //How do you print a newline character in C?
-
-//Write a C program that converts temperature from Celsius to Fahrenheit. Ask the user for input in Celsius and display the result in Fahrenheit.
+    // \n
 
 //What is the purpose of the & symbol when using scanf() to get user input?
+    //to tell where it should be stored
 
 //How do you declare a constant in C? Provide an example.
+    // constant marks variable so it cant be changed
+
 
