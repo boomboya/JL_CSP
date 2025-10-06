@@ -27,19 +27,27 @@ int main(void){
     // it returns math in whole number
 
 //List the arithmetic operators available in C and their functions.
-
+    // addition adds the numbers
+    // subtraction subtracts the second number to the first
+    // multiplication multiplys them
+    // division divdes first number by second
+    // modulus remainder after division
 
 //What is the modulus operator, and how is it used?
     //remainder of a mathh problem
 
 //How do you round a float to the nearest integer in C?
-
+    //function <matyh.h> normally used
 //What is type casting in C? Provide an example of explicit type casting.
-
+    //process converting one data too another
 //How do compound assignment operators work in C? List three examples.
-
+    // shortcut for math operations
+    // +=
+    // -=
+    // *=
 //What is the purpose of the math.h library? Name three functions it provides.
-
+    //provide collection of functions
 //How do you print a float with a specific number of decimal places using printf()?
-
+    // %f
 //What happens when you mix integer and float operations in C?
+    //implicts a type of conversation
