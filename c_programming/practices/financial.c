@@ -3,49 +3,40 @@
 #include <math.h>
 
 int main(void){
-    float monthincome;
+    float monthlyincome;
     float rent;
     float utilities;
     float groceries;
     float transportation;
 
-    float rentPercentage = (rentMortgage / monthlyIncome) * 100;
-    float utilitiesPercentage = (utilities / monthlyIncome) * 100;
-    float groceriesPercentage = (groceries / monthlyIncome) * 100;
-    float transportationPercentage = (transportation / monthlyIncome) * 100;
-
-    float savings = monthincome - (rent + utilities + groceries + transportation);
-    float savingsPercentage = (savings / monthincome) * 100;
-    float spendings = monthlyincome - (rent + utilities + groceries + transportation + savings);
-
-    
+   
     printf("what is your monthly income: ");
-    scanf("%f", &monthincome);
-    while(getchar() != '\n');
-    
+    scanf("%f", &monthlyincome);
+      
     printf("what is your monthly rent: ");
     scanf("%f", &rent);
-    while(getchar() != '\n');
-
+    
     printf("what is your monthly utilities: ");
     scanf("%f", &utilities);
-    while(getchar() != '\n');
-
+    
     printf("what is your monthly groceries: ");
     scanf("%f", &groceries);
-    while(getchar() != '\n');
 
     printf("what is your monthly transportation: ");
     scanf("%f", &transportation);
-    while(getchar() != '\n');
-    
-    printf("your rent is %.2f which is %.2f%% of your income\n", rent, rentPercentage);
-    printf("your utilities is %.2f which is %.2f%% of your income\n", utilities, utilitiesPercentage);
-    printf("your groceries is %.2f which is %.2f%% of your income\n", groceries, groceriesPercentage);
-    printf("your transportation is %.2f which is %.2f%% of your income\n", transportation, transportationPercentage);
+   
 
-    printf("your savings is %.2f which is %.2f%% of your income\n", savings, savingsPercentage);
-    printf("your spendings is %.2f,\n", spendings);
+    printf("Your rent is %.2f and that is %.0f%% of your income.\n", rent, (rent / monthlyincome) * 100.0);
+    printf("your utilities is %.2f which is %.0f%% of your income\n", utilities, (utilities / monthlyincome) * 100.0);
+    printf("your groceries is %.2f which is %.0f%% of your income\n", groceries, (groceries / monthlyincome) * 100.0);
+    printf("your transportation is %.2f which is %.0f%% of your income\n", transportation, (transportation/monthlyincome) * 100.0);
+    
+    float savings = monthlyincome*0.1;
+    
+    float spendings = monthlyincome - (rent + utilities + groceries + transportation + savings);
+    
+    printf("you should save %.2f which is %.0f%% of your income\n", savings, (savings/monthlyincome) * 100.0);
+    printf("your spending money is %.2f,\n", spendings);
 
 
     return 0;
