@@ -32,14 +32,14 @@ int main(void){
 
 
 //What is the difference between a string and a character?
-//: char can only hold one strings can hold multiple
+    // char can only hold one strings can hold multiple
 //What types of quotation marks do we need for a string?
-//:double quotes and single marks for single characters
+    //double quotes and single marks for single characters
 //What library do we need to include to access the string functions in C?
-//: #include <string.h>
+    // #include <string.h>
 //List functions the library allows us to use.
-//: ("%zu", strlen(name));  ("%zu", sizeof(name));
+    // ("%zu", strlen(name));  ("%zu", sizeof(name));
 //How do we concatenate strings in C?
-//: strcat
+    // strcat
 //How do we get individual characters from a string in C?
-//: we call from a list
+    // we call from a list
