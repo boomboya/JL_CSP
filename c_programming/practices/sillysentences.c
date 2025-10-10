@@ -15,4 +15,6 @@ int main(void){
     scanf("%s", food);
 
     printf("one day, a %s danced through %s just to steal a %s.\n", animal, place, food);  
+
+    return 0;
 }
