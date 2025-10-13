@@ -1,0 +1,13 @@
+// JL 7th loops notes
+
+#include <stdio.h>
+
+int main(void){
+
+    char siblings[][20] = {"jaden", "spencer", "chelsea", "jovie"};
+
+    for sibling in siblings:
+    print(f"Hello, {sibling}!")
+
+    return 0;
+}
