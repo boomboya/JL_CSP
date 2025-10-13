@@ -4,10 +4,11 @@
 
 int main(void){
 
-    char siblings[][20] = {"jaden", "spencer", "chelsea", "jovie"};
-
-    for sibling in siblings:
-    print(f"Hello, {sibling}!")
-
+    char siblings[5][20] = {"jaden", "spencer", "chelsea", "jovie"};
+    
+    for(int size = 0; size < 4; size++){
+        printf("Hello %s\n", siblings[size]);
+    }    
+        
     return 0;
 }
