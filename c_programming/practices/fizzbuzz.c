@@ -1,4 +1,4 @@
-//JL 7th fizzbuzz
+ //JL 7th fizzbuzz
 #include <stdio.h>
 
 int main() {
