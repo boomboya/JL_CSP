@@ -1,15 +1,17 @@
 //JL 7th fizzbuzz
 #include <stdio.h>
 
-x = 1
-
-//while x < 51:
-    //if x % 3 ==0 and x % 5 == 0:
-        //print(f"fizzbuzz")
-    //elif x % 5 == 0:
-      //  print(f"buzz")
-    //elif x % 3 == 0:
-       // print(f"fizz")    
-    //else:
-       // print(x)
-    //x+= 1
+int main() {
+    for (int i = 1; i <= 50; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            printf("FizzBuzz\n");
+        } else if (i % 3 == 0) {
+            printf("Fizz\n");
+        } else if (i % 5 == 0) {
+            printf("Buzz\n");
+        } else {
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}
