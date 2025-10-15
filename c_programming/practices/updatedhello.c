@@ -12,6 +12,8 @@ int main(void){
     Hello("jovie");
     Hello("gwen");
     Hello("hannah");
+    Hello("eva");
+    Hello("charlie");
  
     return 0;
 }
