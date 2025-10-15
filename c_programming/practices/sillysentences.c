@@ -4,6 +4,7 @@
 int main(void){
     char place[30];
     char food[30];
+    char animal[30];
 
     printf("Give me an animal: ");
     scanf("%s", animal);
