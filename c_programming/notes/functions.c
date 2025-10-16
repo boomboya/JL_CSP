@@ -10,8 +10,8 @@ void birthday(char* name, int age){
 
 }
 
-int mul( int x, int y){
-    return x *y;
+int mul(int a, int b){
+    return a * b;
 }
 
 float get_number(char* type){
