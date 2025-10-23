@@ -8,84 +8,84 @@
 #define MAX_TRIES 6
 #define WORD_LENGTH 100
 
-void display_hangman(int tries) {
-    const char *stages[] = {
-        "  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \\\n |\n_|___\n",
-        "  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \n |\n_|___\n",
-        "  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |       \n |\n_|___\n",
-        "  _______\n |/      |\n |      (_)\n |      \\|\n |       |\n |       \n |\n_|___\n",
-        "  _______\n |/      |\n |      (_)\n |       |\n |       |\n |       \n |\n_|___\n",
-        "  _______\n |/      |\n |      (_)\n |       \n |       \n |       \n |\n_|___\n",
-        "  _______\n |/      |\n |       \n |       \n |       \n |       \n |\n_|___\n"
-    };
-    printf("%s\n", stages[MAX_TRIES - tries]);
-}
-int main() {
-    const char *word_list[] = {"programming", "hangman", "computer", "science", "challenge"};
+//void display_hangman(int tries) {
+    //const char *stages[] = {
+      //  "  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \\\n |\n_|___\n",
+        //"  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |      / \n |\n_|___\n",
+       // "  _______\n |/      |\n |      (_)\n |      \\|/\n |       |\n |       \n |\n_|___\n",
+        //"  _______\n |/      |\n |      (_)\n |      \\|\n |       |\n |       \n |\n_|___\n",
+        //"  _______\n |/      |\n |      (_)\n |       |\n |       |\n |       \n |\n_|___\n",
+        //"  _______\n |/      |\n |      (_)\n |       \n |       \n |       \n |\n_|___\n",
+        //"  _______\n |/      |\n |       \n |       \n |       \n |       \n |\n_|___\n"
+    //};
+    //printf("%s\n", stages[MAX_TRIES - tries]);
+//}
+//int main() {
+    //const char *word_list[] = {"programming", "hangman", "computer", "science", "challenge"};
     
-    int word_count = sizeof(word_list) / sizeof(word_list[0]);
-    srand(time(0));
+    //int word_count = sizeof(word_list) / sizeof(word_list[0]);
+    ///srand(time(0));
     
-    const char *chosen_word = word_list[rand() % word_count];
-    int word_len = strlen(chosen_word);
+    /const char *chosen_word = word_list[rand() % word_count];
+    //int word_len = strlen(chosen_word);
     
-    char guessed[word_len + 1];
-    for (int i = 0; i < word_len; i++) {
-        guessed[i] = '_';
-    }
-    guessed[word_len] = '\0';
-    int tries = MAX_TRIES;
-    char guessed_letters[26] = {0};
-    int guessed_count = 0;
-    printf("Welcome to Hangman!\n");
-    while (tries > 0) {
-        printf("\nWord: %s\n", guessed);
-        printf("Guessed letters: ");
-        for (int i = 0; i < guessed_count; i++) {
-            printf("%c ", guessed_letters[i]);
-        }
-        printf("\n");
-        display_hangman(tries);
-        printf("Enter a letter: ");
-        char guess;
-        scanf(" %c", &guess);
-        guess = tolower(guess);
-        int already_guessed = 0;
-        for (int i = 0; i < guessed_count; i++) {
-            if (guessed_letters[i] == guess) {
-                already_guessed = 1;
-                break;
-            }
-        }
-        if (already_guessed) {
-            printf("You already guessed that letter. Try again.\n");
-            continue;
-        }
-        guessed_letters[guessed_count++] = guess;
-        int correct_guess = 0;
-        for (int i = 0; i < word_len; i++) {
-            if (chosen_word[i] == guess) {
-                guessed[i] = guess;
-                correct_guess = 1;
-            }
-        }
-        if (!correct_guess) {
-            tries--;
-            printf("Wrong guess! You have %d tries left.\n", tries);
-        } else {
-            printf("Good guess!\n");
-        }
-        if (strcmp(guessed, chosen_word) == 0) {
-            printf("\nCongratulations! You've guessed the word: %s\n", chosen_word);
-            break;
-        }
-    }
-    if (tries == 0) {
-        display_hangman(tries);
-        printf("\nSorry, you've run out of tries. The word was: %s\n", chosen_word);
-    }
-    return 0;
-}
+   // char guessed[word_len + 1];
+   // for (int i = 0; i < word_len; i++) {
+   //     guessed[i] = '_';
+   // }
+   // guessed[word_len] = '\0';
+   // int tries = MAX_TRIES;
+   // char guessed_letters[26] = {0};
+   // int guessed_count = 0;
+   // printf("Welcome to Hangman!\n");
+   // while (tries > 0) {
+     //   printf("\nWord: %s\n", guessed);
+     //   printf("Guessed letters: ");
+     //   for (int i = 0; i < guessed_count; i++) {
+     //       printf("%c ", guessed_letters[i]);
+    //    }
+     //   printf("\n");
+      //  display_hangman(tries);
+      //  printf("Enter a letter: ");
+      //  char guess;
+      ///  scanf(" %c", &guess);
+      //  guess = tolower(guess);
+      //  int already_guessed = 0;
+      //  for (int i = 0; i < guessed_count; i++) {
+      //      if (guessed_letters[i] == guess) {
+      //          already_guessed = 1;
+      ///          break;
+      //     }
+      //  }
+       // if (already_guessed) {
+         ///   printf("You already guessed that letter. Try again.\n");
+          //  continue;
+       // }
+        //guessed_letters[guessed_count++] = guess;
+        //int correct_guess = 0;
+        //for (int i = 0; i < word_len; i++) {
+        ///    if (chosen_word[i] == guess) {
+        ///        guessed[i] = guess;
+        //        correct_guess = 1;
+         //   }
+        //}
+        //f (!correct_guess) {
+          //  tries--;
+         //   printf("Wrong guess! You have %d tries left.\n", tries);
+      //  } else {
+       //     printf("Good guess!\n");
+       // }
+       // if (strcmp(guessed, chosen_word) == 0) {
+       //     printf("\nCongratulations! You've guessed the word: %s\n", chosen_word);
+       //     break;
+       // }
+    //}
+    ///if (tries == 0) {
+     //   display_hangman(tries);
+     //   printf("\nSorry, you've run out of tries. The word was: %s\n", chosen_word);
+    //}
+    //return 0;
+//}
 
 // AE, JL, EG, XP, EM 7th Hangman Video Game
 // Addie Erickson made repository + overall debugging
@@ -116,30 +116,34 @@ void board(wrong){
     } else {
         printf(" |__| \n |  0  \n |   /|\\ \n |  /\\ \n |______\n ");
     }
-    printf("%s\n", stages[MAX_TRIES - tries]); 
+    //printf("%s\n", stages[MAX_TRIES - tries]); 
 }
    //jovie lineback making word peice
 int main(void){
+    
+    // word list containing words for the hangman game
     const char *word_list[] = {"pancakes", "waffles","burgers", "cinnamonrolls", "scooter","cake","pizza","supercalifragilisticexpialidocious","jumpsuit","pneumonoultramicroscopicsilicovolcanoconiosis","minions","microsopic","water","apples","radioactive","pasta","tortellini","jellyfish","fruitsnacks","red","stingray","octopus","smiley face","","bike","pinapples","JOVIE","cherries","harold","supernova","hangman", "femboys", "invincible", "python", "code", "cancer", "atmosphere", "dyslexic", "little", "big", "yeah dog", "OH YEAHH", "VECTOR", "ISAIAH", "boxing", "fortnite", "xander", "eva", "jesus", "fernando", "kyle", "samamntha", "mcdonalds", "ryan", "prorammers", "wear", "glasses", "because", "they", "cant", "C", "why", "do", "python", "today", "comuter", "ciera", "archie", "hannah", "MCdonalds", "gyan", "discumbobulate","meow" ,"bored", "help", "mike", "hawk", "turn", "batman", "spiderman","green", "goblin"};
     
+    //gets how much spaces the word chosen has
     int word_count = sizeof(word_list) / sizeof(word_list[0]);
     srand(time(0));
     
+    //chooses a random word from the list 
     const char *chosen_word = word_list[rand() % word_count];
     int word_len = strlen(chosen_word);
     
-
-
-
-    
+    // this makes the spaces for the letters in the word _
     char guessed[word_len + 1];
+    
     for (int i = 0; i < word_len; i++) {
         guessed[i] = '_';
     }
     guessed[word_len] = '\0';
+    //keeps count of tries and guessed letters
     int tries = MAX_TRIES;
     char guessed_letters[26] = {0};
     int guessed_count = 0;
+    
     printf("Welcome to Hangman!\n");
     
     // Xander Parker, general game logic and whatnot
@@ -150,7 +154,7 @@ int main(void){
             printf("%c ", guessed_letters[i]);
         }
         printf("\n");
-        display_hangman(tries);
+        board();
         printf("Enter a letter: ");
         char guess;
         scanf(" %c", &guess);
@@ -161,10 +165,7 @@ int main(void){
                 already_guessed = 1;
                 break;
             }
-
-
-//Addie Erickson guesses
-void guessing(void){
+        }
         if (already_guessed) {
             printf("You already guessed that letter. Try again.\n");
             continue;
@@ -190,8 +191,9 @@ void guessing(void){
     }
     
     if (tries == 0) {
-        display_hangman(tries);
+        board();
         printf("\nSorry, you've run out of tries. The word was: %s\n", chosen_word);
     }
     return 0;
 }
+
